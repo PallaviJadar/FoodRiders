@@ -1,0 +1,63 @@
+.menuContainer {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+    background: white;
+    min-height: 100vh;
+}
+
+.header {
+    text-align: center;
+    margin-bottom: 2rem;
+    padding: 2.5rem;
+    background: #f8f9fa;
+    border-radius: 20px;
+}
+
+.header h1 {
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: #2d3436;
+    margin: 0 0 0.5rem 0;
+    font-family: 'Outfit', sans-serif;
+}
+
+.header p {
+    color: #636e72;
+    font-size: 1.1rem;
+}
+
+.menuSection {
+    margin-bottom: 4rem;
+}
+
+.menuSection h2 {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #2d3436;
+    margin-bottom: 1.5rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 3px solid #FF5E5E;
+    display: inline-block;
+}
+
+.itemGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 2rem;
+}
+
+@media (max-width: 768px) {
+    .menuContainer {
+        padding: 1rem;
+    }
+
+    .header h1 {
+        font-size: 1.8rem;
+    }
+
+    .itemGrid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+    }
+}

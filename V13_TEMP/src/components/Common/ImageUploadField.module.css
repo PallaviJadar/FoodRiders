@@ -1,0 +1,178 @@
+.uploadField {
+    margin-bottom: 20px;
+}
+
+.label {
+    display: block;
+    font-weight: 600;
+    font-size: 14px;
+    color: #333;
+    margin-bottom: 8px;
+}
+
+.uploadArea {
+    border: 2px dashed #ddd;
+    border-radius: 12px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.uploadArea:hover {
+    border-color: #667eea;
+}
+
+.uploadPrompt {
+    position: relative;
+    padding: 40px 20px;
+    text-align: center;
+    cursor: pointer;
+    background: #f8f9fa;
+    transition: background 0.3s ease;
+}
+
+.uploadPrompt:hover {
+    background: #f0f1f5;
+}
+
+.fileInput {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    cursor: pointer;
+}
+
+.uploadIcon {
+    font-size: 48px;
+    margin-bottom: 10px;
+}
+
+.uploadText {
+    font-size: 16px;
+    color: #333;
+    margin-bottom: 5px;
+    font-weight: 500;
+}
+
+.uploadHint {
+    font-size: 13px;
+    color: #666;
+}
+
+.previewArea {
+    position: relative;
+    padding: 10px;
+    background: #f8f9fa;
+}
+
+.previewImage {
+    width: 100%;
+    max-height: 300px;
+    object-fit: contain;
+    border-radius: 8px;
+}
+
+.removeBtn {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: rgba(0, 0, 0, 0.7);
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.removeBtn:hover {
+    background: rgba(0, 0, 0, 0.9);
+    transform: scale(1.05);
+}
+
+.compressing {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 12px;
+    background: #e3f2fd;
+    border-radius: 8px;
+    margin-top: 10px;
+    color: #1976d2;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.spinner {
+    width: 20px;
+    height: 20px;
+    border: 3px solid #e3f2fd;
+    border-top-color: #1976d2;
+    border-radius: 50%;
+    animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.success {
+    padding: 12px;
+    background: #e8f5e9;
+    border-radius: 8px;
+    margin-top: 10px;
+    color: #2e7d32;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.error {
+    padding: 12px;
+    background: #ffebee;
+    border-radius: 8px;
+    margin-top: 10px;
+    color: #c62828;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.qrNote {
+    padding: 10px;
+    background: #fff3e0;
+    border-radius: 8px;
+    margin-top: 10px;
+    color: #e65100;
+    font-size: 13px;
+}
+
+/* Mobile Responsive */
+@media (max-width: 600px) {
+    .uploadPrompt {
+        padding: 30px 15px;
+    }
+
+    .uploadIcon {
+        font-size: 40px;
+    }
+
+    .uploadText {
+        font-size: 14px;
+    }
+
+    .previewImage {
+        max-height: 200px;
+    }
+
+    .removeBtn {
+        top: 15px;
+        right: 15px;
+        padding: 6px 12px;
+        font-size: 12px;
+    }
+}

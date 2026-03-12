@@ -1,0 +1,124 @@
+.outerDiv {
+    width: 100%;
+    height: 44px;
+    /* Slightly reduced height for cleaner look */
+    padding: 0 10px;
+    border-radius: 8px;
+    /* Slightly tighter radius */
+    border: 1px solid var(--brd1-color);
+    /* Softer border */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    box-shadow: var(--box-shadow1);
+    background-color: var(--bg-f8f8f8);
+    /* Very light subtle bg */
+    transition: all 0.3s ease;
+}
+
+.outerDiv:hover,
+.outerDiv:focus-within {
+    background-color: var(--bg-white);
+    box-shadow: var(--box-shadow3);
+    border-color: var(--brd2-color);
+}
+
+.srch1 {
+    width: 32%;
+    /* Reduced slightly */
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding-left: 5px;
+    cursor: pointer;
+    flex-shrink: 0;
+}
+
+.srch2 {
+    flex: 1;
+    /* Take remaining space */
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding-left: 10px;
+}
+
+.hr {
+    width: 1px;
+    height: 20px;
+    background-color: #ddd;
+    border: none;
+    margin: 0 8px;
+}
+
+.inpt {
+    width: 100%;
+    border: none;
+    outline: none;
+    padding: 0 8px;
+    font-size: 0.9rem;
+    font-weight: 400;
+    color: var(--color-title-text);
+    font-family: 'Outfit', sans-serif;
+    background: transparent;
+    text-overflow: ellipsis;
+}
+
+.inpt::placeholder {
+    color: #aaa;
+    font-weight: 300;
+}
+
+.downArrow {
+    width: 10px;
+    height: 10px;
+    opacity: 0.5;
+    transition: transform 0.3s ease;
+    margin-left: auto;
+    /* Push to right of srch1 container */
+    margin-right: 5px;
+}
+
+.srch1:hover .downArrow {
+    transform: rotate(180deg);
+}
+
+.iconBox {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.icon {
+    width: 18px;
+    height: 18px;
+    opacity: 0.6;
+}
+
+/* Dropdown styling kept same but hidden logic refined */
+.dropdownBox {
+    position: absolute;
+    top: 50px;
+    left: 0;
+    width: 100%;
+    max-height: 250px;
+    overflow-y: auto;
+    background-color: var(--bg-white);
+    border-radius: 8px;
+    box-shadow: var(--box-shadow2);
+    border: 1px solid var(--brd1-color);
+    z-index: 101;
+    padding: 10px;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-8px);
+    transition: all 0.2s ease;
+}
+
+.outerDiv:focus-within .dropdownBox {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}

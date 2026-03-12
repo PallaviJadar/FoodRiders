@@ -1,0 +1,118 @@
+.outerDiv {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    padding-top: 100px;
+    background-color: #ffffff;
+}
+
+.content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+.heading {
+    font-size: 2rem;
+    font-weight: 600;
+    margin-bottom: 2rem;
+    color: #333;
+    text-transform: capitalize;
+    align-self: flex-start;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 2rem;
+    width: 100%;
+}
+
+.cardWrapper {
+    display: flex;
+    justify-content: center;
+}
+
+.loader {
+    font-size: 1.2rem;
+    color: #fc8019;
+    font-weight: 500;
+    margin-top: 3rem;
+}
+
+.noResults {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 3rem;
+    text-align: center;
+    color: #777;
+}
+
+.emptyImg {
+    max-width: 300px;
+    margin-bottom: 1rem;
+    opacity: 0.8;
+}
+
+@media (max-width: 768px) {
+    .outerDiv {
+        padding-top: 80px;
+    }
+
+    .content {
+        padding: 1rem;
+    }
+
+    .grid {
+        grid-template-columns: 1fr;
+    }
+
+    .heading {
+        font-size: 1.5rem;
+    }
+}
+
+.cardWrapper {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    cursor: pointer;
+}
+
+.offerBadge {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    background: linear-gradient(135deg, #00b138, #008f2d);
+    color: white;
+    padding: 0.4rem 1rem;
+    border-radius: 6px;
+    font-size: 0.85rem;
+    font-weight: 700;
+    box-shadow: 0 4px 12px rgba(0, 177, 56, 0.3);
+    z-index: 5;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    animation: badgePulse 2s infinite;
+}
+
+@keyframes badgePulse {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.05);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}

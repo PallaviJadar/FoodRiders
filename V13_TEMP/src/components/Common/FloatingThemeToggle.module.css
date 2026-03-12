@@ -1,0 +1,165 @@
+.standaloneToggle {
+    position: fixed;
+    z-index: 99999;
+    pointer-events: auto;
+    touch-action: none !important;
+    /* Critical for mobile dragging */
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.floatingBtn {
+    width: 3.8rem;
+    height: 3.8rem;
+    border-radius: 50%;
+    background: var(--bg-white);
+    border: 2px solid var(--brd1-color);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    cursor: grab;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.1s ease;
+    font-size: 1.6rem;
+    padding: 0;
+    margin: 0;
+    user-select: none;
+    -webkit-tap-highlight-color: transparent;
+}
+
+.floatingBtn:active {
+    cursor: grabbing;
+    transform: scale(0.9);
+}
+
+.themeBtn {
+    background: var(--bg-white);
+}
+
+.supportBtn {
+    background: #ff4757;
+    color: white;
+    border-color: rgba(255, 255, 255, 0.2);
+}
+
+.supportBtn.active {
+    background: #2f3542;
+    border-color: #ff4757;
+}
+
+.supportMenu {
+    position: absolute;
+    bottom: 4.5rem;
+    right: 0;
+    background: var(--bg-white);
+    border: 1px solid var(--brd1-color);
+    border-radius: 20px;
+    padding: 1.25rem;
+    width: 260px;
+    box-shadow: 0 15px 45px rgba(0, 0, 0, 0.3);
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+    pointer-events: auto;
+    transform-origin: bottom right;
+}
+
+.supportHeader {
+    font-weight: 800;
+    font-size: 1.15rem;
+    color: var(--text-black);
+    border-bottom: 2px solid var(--brd-color);
+    padding-bottom: 0.6rem;
+    margin-bottom: 0.4rem;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.troubleText {
+    font-size: 0.85rem;
+    color: var(--text-gray);
+    line-height: 1.5;
+    font-weight: 500;
+}
+
+.supportLink {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    width: 100%;
+    padding: 14px;
+    border-radius: 12px;
+    border: 1px solid var(--brd1-color);
+    background: var(--bg-white);
+    color: var(--text-black);
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    font-size: 1rem;
+}
+
+.supportLink:hover {
+    background: var(--bg-light);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.supportLink span {
+    font-size: 1.3rem;
+}
+
+.icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    pointer-events: none;
+}
+
+/* Dark Theme Adjustments */
+[data-theme='dark'] .floatingBtn.themeBtn {
+    background: #1a1a1a;
+    border-color: #333;
+    color: #ffd700;
+}
+
+[data-theme='dark'] .supportMenu {
+    background: #1a1a1a;
+    border-color: #333;
+    color: #fff;
+}
+
+[data-theme='dark'] .supportLink {
+    background: #262626;
+    border-color: #444;
+    color: #fff;
+}
+
+[data-theme='dark'] .supportLink:hover {
+    background: #333;
+}
+
+[data-theme='dark'] .supportHeader {
+    border-color: #333;
+}
+
+@media (max-width: 768px) {
+    .floatingBtn {
+        width: 3.5rem;
+        height: 3.5rem;
+        font-size: 1.4rem;
+    }
+
+    .supportMenu {
+        width: 230px;
+        padding: 1.1rem;
+        bottom: 4rem;
+    }
+
+    .supportLink {
+        padding: 12px;
+        font-size: 0.9rem;
+    }
+}

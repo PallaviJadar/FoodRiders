@@ -1,0 +1,254 @@
+.ownerFooterContainer {
+    background: var(--bg-surface);
+    color: var(--color-text-body);
+    padding: 1rem 1rem 4rem;
+    font-family: 'Outfit', sans-serif;
+    position: relative;
+    overflow: hidden;
+    border-top: 1px solid var(--border-subtle);
+}
+
+.contentWrapper {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1.5fr 1fr;
+    gap: 5rem;
+    align-items: start;
+}
+
+.brandSection {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 0.8rem;
+}
+
+.footerLogo {
+    width: 100px;
+    height: 100px;
+    object-fit: contain;
+    border-radius: 50%;
+    padding: 5px;
+    background: white;
+    box-shadow: 0 8px 25px rgba(255, 94, 94, 0.2);
+    border: 2px solid #FF5E5E;
+    margin-bottom: 0.5rem;
+    transition: transform 0.3s ease;
+}
+
+.footerLogo:hover {
+    transform: rotate(5deg) scale(1.05);
+}
+
+.brandName {
+    font-size: 2.8rem;
+    font-weight: 900;
+    margin: 0;
+    line-height: 1;
+    background: linear-gradient(135deg, #FF5E5E 0%, #FFAD4D 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    letter-spacing: -1.5px;
+    font-family: 'Trade Winds', cursive;
+}
+
+.foundedInfo {
+    font-size: 0.9rem;
+    color: var(--color-text-muted);
+    font-weight: 600;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    opacity: 0.8;
+}
+
+.bioSection {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.sectionTitle {
+    font-size: 1.1rem;
+    color: #FF5E5E;
+    margin: 0;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: 800;
+    position: relative;
+    padding-bottom: 0.5rem;
+}
+
+.sectionTitle::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 40px;
+    height: 3px;
+    background: #FFAD4D;
+    border-radius: 2px;
+}
+
+.bioText {
+    font-size: 1.05rem;
+    line-height: 1.8;
+    color: var(--color-text-body);
+    font-weight: 400;
+    opacity: 0.9;
+}
+
+.socialSection {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    align-items: flex-end;
+}
+
+.socialIcons {
+    display: flex;
+    gap: 1.2rem;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+}
+
+.iconLink {
+    width: 52px;
+    height: 52px;
+    border-radius: 16px;
+    background: var(--bg-card);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    border: 1px solid var(--border-subtle);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    position: relative;
+    overflow: hidden;
+}
+
+.iconLink::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, #FF5E5E, #FFAD4D);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    z-index: 1;
+}
+
+.iconLink img {
+    width: 28px;
+    height: 28px;
+    object-fit: contain;
+    z-index: 2;
+    transition: all 0.3s ease;
+}
+
+/* Specific icon colors instead of invert */
+[aria-label="Instagram"] img {
+    filter: drop-shadow(0 0 2px rgba(225, 48, 108, 0.3));
+}
+
+[aria-label="YouTube"] img {
+    filter: drop-shadow(0 0 2px rgba(255, 0, 0, 0.3));
+}
+
+[aria-label="Facebook"] img {
+    filter: drop-shadow(0 0 2px rgba(24, 119, 242, 0.3));
+}
+
+[aria-label="WhatsApp"] img {
+    filter: drop-shadow(0 0 2px rgba(37, 211, 102, 0.3));
+}
+
+.iconLink:hover {
+    transform: translateY(-8px) scale(1.1);
+    border-color: #FF5E5E;
+    box-shadow: 0 15px 30px rgba(255, 94, 94, 0.2);
+}
+
+.iconLink:hover::before {
+    opacity: 0.1;
+    /* Very subtle gradient tint instead of full color */
+}
+
+.iconLink:hover img {
+    transform: scale(1.2);
+    /* Remove the brightness(0) invert(1) to keep original brand colors clear */
+}
+
+.separator {
+    max-width: 1200px;
+    margin: 4rem auto 0;
+    height: 1.5px;
+    background: linear-gradient(90deg, transparent, var(--border-subtle), transparent);
+}
+
+@media (max-width: 992px) {
+    .contentWrapper {
+        gap: 3rem;
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 768px) {
+    .ownerFooterContainer {
+        padding: 4rem 1.5rem 3rem;
+    }
+
+    .brandSection {
+        text-align: center;
+    }
+
+    .sectionTitle {
+        align-self: center;
+        text-align: center;
+    }
+
+    .sectionTitle::after {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .bioText {
+        text-align: center;
+        font-size: 1rem;
+    }
+
+    .socialSection {
+        align-items: center;
+    }
+
+    .socialIcons {
+        justify-content: center;
+    }
+
+    .brandName {
+        font-size: 2.2rem;
+    }
+
+    .footerLogo {
+        width: 85px;
+        height: 85px;
+    }
+}
+
+[data-theme='dark'] .iconLink {
+    background: rgba(255, 255, 255, 0.05);
+    border-color: rgba(255, 255, 255, 0.1);
+}
+
+[data-theme='dark'] .iconLink img {
+    /* Subtle glow for icons in dark mode without full inversion */
+    filter: brightness(1.2) drop-shadow(0 0 5px rgba(255, 255, 255, 0.1));
+}
+
+[data-theme='dark'] .bioText {
+    opacity: 0.8;
+}

@@ -1,0 +1,43 @@
+{
+  "project_info": {
+    "project_number": "1035575609061",
+    "project_id": "foodriders-66fdd",
+    "storage_bucket": "foodriders-66fdd.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1035575609061:android:bfc9d67f41e17d1ed2b60c",
+        "android_client_info": {
+          "package_name": "com.foodriders.app"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [{ "current_key": "AIzaSyAneoNleNfpMclLPA61DOAYaIedz2cf4Xs" }],
+      "services": { "appinvite_service": { "other_platform_oauth_client": [] } }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1035575609061:android:bfc9d67f41e17d1ed2b60c",
+        "android_client_info": {
+          "package_name": "com.foodriders.admin"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [{ "current_key": "AIzaSyAneoNleNfpMclLPA61DOAYaIedz2cf4Xs" }],
+      "services": { "appinvite_service": { "other_platform_oauth_client": [] } }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1035575609061:android:bfc9d67f41e17d1ed2b60c",
+        "android_client_info": {
+          "package_name": "com.foodriders.rider"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [{ "current_key": "AIzaSyAneoNleNfpMclLPA61DOAYaIedz2cf4Xs" }],
+      "services": { "appinvite_service": { "other_platform_oauth_client": [] } }
+    }
+  ],
+  "configuration_version": "1"
+}

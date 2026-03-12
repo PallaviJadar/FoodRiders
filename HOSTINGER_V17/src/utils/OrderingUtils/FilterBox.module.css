@@ -1,0 +1,51 @@
+.outerDiv {
+    width: max-content;
+    height: 40px;
+    /* Increased height for pill shape */
+    margin: 0 8px;
+    padding: 0 16px;
+    border-radius: 20px;
+    /* Pill shape */
+    border: 1px solid rgba(0, 0, 0, 0.08);
+    background: rgba(255, 255, 255, 0.8);
+    /* Glass background */
+    backdrop-filter: blur(4px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #4a5568;
+    font-size: 0.95rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.02);
+    font-family: 'Outfit', sans-serif;
+}
+
+.outerDiv:hover {
+    background-color: #fff;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.08);
+    border-color: rgba(0, 0, 0, 0.15);
+}
+
+.leftIconBox,
+.rightIconBox {
+    width: 16px;
+    height: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.leftIcon,
+.rightIcon {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    opacity: 0.7;
+}
+
+.text {
+    margin: 0 8px;
+}

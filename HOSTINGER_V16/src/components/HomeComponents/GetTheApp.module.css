@@ -1,0 +1,228 @@
+.outerDiv {
+    width: 100%;
+    padding: 4rem 0;
+    background: var(--bg-main);
+}
+
+.innerDiv {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    gap: 4rem;
+    padding: 0 2rem;
+}
+
+.leftSec {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.mobileImg {
+    max-width: 100%;
+    height: auto;
+    filter: drop-shadow(0 20px 40px rgba(0, 0, 0, 0.15));
+    animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-20px);
+    }
+}
+
+.rightSec {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.title {
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: #2d3436;
+    letter-spacing: -0.5px;
+    background: linear-gradient(135deg, #FF5E5E, #FFAD4D);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.tag {
+    font-size: 1.1rem;
+    color: var(--color-text-muted);
+    font-weight: 500;
+    line-height: 1.6;
+}
+
+.orderOptions {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    margin-top: 1rem;
+}
+
+.orderButton {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    padding: 1.5rem 2rem;
+    background: var(--bg-card);
+    border: 2px solid var(--border-subtle);
+    border-radius: 16px;
+    cursor: pointer;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: var(--shadow-sm);
+    position: relative;
+    overflow: hidden;
+}
+
+.orderButton::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, #FF5E5E, #FFAD4D);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.orderButton:hover::before {
+    opacity: 1;
+}
+
+.orderButton:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+    border-color: rgba(110, 198, 234, 0.4);
+    background: linear-gradient(135deg, rgba(255, 94, 94, 0.05), rgba(255, 173, 77, 0.05));
+}
+
+.orderButton:first-child {
+    background: linear-gradient(135deg, rgba(76, 175, 80, 0.05), rgba(110, 198, 234, 0.05));
+}
+
+.orderButton:first-child:hover {
+    background: linear-gradient(135deg, rgba(76, 175, 80, 0.1), rgba(110, 198, 234, 0.1));
+}
+
+.orderButton:last-child {
+    background: linear-gradient(135deg, rgba(37, 211, 102, 0.05), rgba(76, 175, 80, 0.05));
+}
+
+.orderButton:last-child:hover {
+    background: linear-gradient(135deg, rgba(37, 211, 102, 0.1), rgba(76, 175, 80, 0.1));
+}
+
+.icon {
+    width: 50px;
+    height: 50px;
+    object-fit: contain;
+    transition: transform 0.3s ease;
+}
+
+.orderButton:hover .icon {
+    transform: scale(1.1) rotate(5deg);
+}
+
+.buttonContent {
+    flex: 1;
+    text-align: left;
+}
+
+.buttonTitle {
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: var(--color-text-main);
+    margin-bottom: 0.3rem;
+}
+
+.buttonSubtitle {
+    font-size: 1rem;
+    color: var(--color-text-muted);
+    font-weight: 500;
+}
+
+.infoBox {
+    background: var(--bg-card);
+    padding: 2rem;
+    border-radius: 16px;
+    border: 2px solid var(--border-subtle);
+    box-shadow: var(--shadow-md);
+    margin-top: 1rem;
+}
+
+.infoTitle {
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: var(--color-text-main);
+    margin-bottom: 1rem;
+}
+
+.infoList {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+}
+
+.infoItem {
+    font-size: 1rem;
+    color: var(--color-text-body);
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+@media (max-width: 968px) {
+    .innerDiv {
+        flex-direction: column;
+        gap: 3rem;
+    }
+
+    .leftSec {
+        order: 2;
+    }
+
+    .rightSec {
+        order: 1;
+    }
+}
+
+@media (max-width: 768px) {
+    .title {
+        font-size: 2rem;
+    }
+
+    .tag {
+        font-size: 1rem;
+    }
+
+    .orderButton {
+        padding: 1.2rem 1.5rem;
+    }
+
+    .icon {
+        width: 40px;
+        height: 40px;
+    }
+
+    .buttonTitle {
+        font-size: 1.1rem;
+    }
+
+    .buttonSubtitle {
+        font-size: 0.9rem;
+    }
+}

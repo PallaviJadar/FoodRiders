@@ -1,0 +1,307 @@
+.outerDiv {
+    width: 100%;
+    margin: 20px 0 30px 0;
+    position: relative;
+    border-radius: 20px;
+    background: var(--bg-card);
+    box-shadow: var(--shadow-md);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Add a decorative top border/gradient */
+.outerDiv::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 6px;
+    background: linear-gradient(90deg, #FF5E5E, #FFAD4D);
+    z-index: 2;
+}
+
+.innerDiv {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 2.5rem 3rem 1.5rem;
+    position: relative;
+    z-index: 1;
+}
+
+/* Background pattern for visual interest */
+.innerDiv::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 300px;
+    height: 100%;
+    background: radial-gradient(circle at top right, rgba(255, 173, 77, 0.08) 0%, transparent 60%);
+    z-index: -1;
+    border-radius: 0 20px 20px 0;
+}
+
+.left {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    max-width: 65%;
+}
+
+.right {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+    max-width: 400px;
+}
+
+.title {
+    font-size: 2.8rem;
+    font-weight: 800;
+    color: var(--color-text-main);
+    font-family: 'Inter', sans-serif;
+    margin: 0;
+    line-height: 1.1;
+    letter-spacing: -0.5px;
+}
+
+.specials {
+    font-size: 1.15rem;
+    color: var(--color-text-muted);
+    font-weight: 500;
+    margin-bottom: 5px;
+}
+
+.address {
+    font-size: 1.05rem;
+    color: var(--color-text-dim);
+    font-weight: 400;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background: var(--bg-subtle);
+    padding: 8px 12px;
+    border-radius: 8px;
+    align-self: flex-start;
+}
+
+.timings {
+    display: flex;
+    align-items: center;
+    font-size: 1rem;
+    margin-top: 5px;
+    background: var(--bg-subtle);
+    padding: 8px 12px;
+    border-radius: 8px;
+    align-self: flex-start;
+    border: 1px solid var(--border-subtle);
+}
+
+.smallIcon {
+    width: 20px;
+    /* Slightly larger */
+    height: 20px;
+    opacity: 0.8;
+    object-fit: contain;
+}
+
+.statusBadge {
+    font-weight: 700;
+    margin-left: 6px;
+    text-transform: uppercase;
+    font-size: 0.95rem;
+    letter-spacing: 0.5px;
+}
+
+.open {
+    color: #10b981;
+}
+
+.closed {
+    color: #ef4444;
+}
+
+/* Information Tooltip Styling */
+.infoIconBox {
+    margin-left: 10px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    background: var(--bg-card);
+    border-radius: 50%;
+    padding: 2px;
+}
+
+.infoIcon {
+    width: 18px;
+    height: 18px;
+    opacity: 0.6;
+    transition: all 0.2s;
+}
+
+.infoIconBox:hover .infoIcon {
+    opacity: 1;
+    transform: scale(1.1);
+    filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.1));
+}
+
+.infoTooltip {
+    position: absolute;
+    top: 35px;
+    left: 50%;
+    transform: translateX(-50%) translateY(10px);
+    background: var(--bg-card);
+    border: 1px solid var(--border-subtle);
+    box-shadow: var(--shadow-lg);
+    padding: 15px;
+    border-radius: 12px;
+    width: 240px;
+    z-index: 100;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    opacity: 0;
+    transition: all 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.infoIconBox:hover .infoTooltip {
+    display: flex;
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
+}
+
+/* Tooltip Arrow */
+.infoTooltip::before {
+    content: '';
+    position: absolute;
+    top: -6px;
+    left: 50%;
+    transform: translateX(-50) rotate(45deg);
+    width: 12px;
+    height: 12px;
+    background: var(--bg-card);
+    border-top: 1px solid var(--border-subtle);
+    border-left: 1px solid var(--border-subtle);
+}
+
+.ttil {
+    font-weight: 700;
+    color: var(--color-text-main);
+    margin-bottom: 8px;
+    font-size: 1.1rem;
+    border-bottom: 2px solid var(--color-primary);
+    padding-bottom: 2px;
+}
+
+.ttim {
+    font-size: 0.9rem;
+    color: var(--color-text-body);
+    background: var(--bg-surface);
+    padding: 6px 12px;
+    border-radius: 6px;
+    width: 100%;
+    text-align: center;
+}
+
+/* Search Bar Section */
+.searchSection {
+    width: 100%;
+    padding: 0 3rem 2.5rem;
+    z-index: 1;
+    display: flex;
+}
+
+.searchWrapper {
+    width: 100%;
+    max-width: 100%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    background: var(--bg-subtle);
+    border: 1px solid var(--border-subtle);
+    border-radius: 14px;
+    padding: 0 1.2rem;
+    height: 54px;
+    transition: all 0.3s ease;
+}
+
+.searchWrapper:focus-within {
+    border-color: var(--color-primary);
+    box-shadow: 0 0 0 4px rgba(255, 94, 94, 0.1);
+    background: var(--bg-card);
+}
+
+.searchIcon {
+    color: var(--color-text-dim);
+    display: flex;
+    align-items: center;
+    margin-right: 12px;
+}
+
+.searchInput {
+    flex: 1;
+    background: transparent;
+    border: none;
+    outline: none;
+    color: var(--color-text-main);
+    font-size: 1.1rem;
+    font-weight: 500;
+    width: 100%;
+    height: 100%;
+}
+
+.searchInput::placeholder {
+    color: var(--color-text-dim);
+}
+
+.clearBtn {
+    background: transparent;
+    border: none;
+    color: var(--color-text-dim);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    padding: 6px;
+    border-radius: 50%;
+    transition: all 0.2s;
+}
+
+.clearBtn:hover {
+    background: var(--border-subtle);
+    color: var(--color-text-main);
+}
+
+@media (max-width: 768px) {
+    .innerDiv {
+        flex-direction: column;
+        padding: 1.5rem 1.5rem 1rem;
+    }
+
+    .left {
+        max-width: 100%;
+        margin-bottom: 1.5rem;
+    }
+
+    .title {
+        font-size: 2.2rem;
+    }
+
+    .right {
+        width: 100%;
+        align-items: stretch;
+        display: flex;
+        padding: 0;
+        margin-top: 1rem;
+    }
+
+    .searchWrapper {
+        height: 48px;
+    }
+}

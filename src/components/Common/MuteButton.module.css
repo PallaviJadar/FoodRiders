@@ -1,0 +1,41 @@
+.muteBtn {
+    padding: 0.5rem 1rem;
+    background: #EA4335;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    box-shadow: 0 2px 4px rgba(234, 67, 53, 0.3);
+}
+
+.muteBtn:hover {
+    background: #C5221F;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 8px rgba(234, 67, 53, 0.4);
+}
+
+.muteBtn:active {
+    transform: translateY(0);
+}
+
+.muteBtn.muted {
+    background: #5F6368;
+    box-shadow: 0 2px 4px rgba(95, 99, 104, 0.3);
+}
+
+.muteBtn.muted:hover {
+    background: #3C4043;
+}
+
+@media (max-width: 768px) {
+    .muteBtn {
+        font-size: 0.85rem;
+        padding: 0.4rem 0.8rem;
+    }
+}

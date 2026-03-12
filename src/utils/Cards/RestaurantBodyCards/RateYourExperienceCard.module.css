@@ -1,0 +1,70 @@
+.outerDiv {
+    min-width: 300px;
+    max-width: 100%;
+    margin: 2rem auto;
+    text-align: center;
+    padding: 1rem;
+    background: transparent;
+}
+
+.innerDiv {
+    padding: 1em 0.5em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+.ttl {
+    font-size: 2rem;
+    font-weight: 800;
+    color: #2d3436;
+    margin: 0;
+    font-family: 'Outfit', sans-serif;
+}
+
+.subTtl {
+    font-size: 1.1rem;
+    color: #636e72;
+    margin-top: -0.5rem;
+    font-weight: 400;
+}
+
+.ratingBox {
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+    font-size: 2.5rem;
+    color: #dfe6e9;
+    /* Inactive star color */
+    cursor: pointer;
+}
+
+.star {
+    transition: color 0.2s;
+}
+
+.star.active {
+    color: #fdcb6e;
+    /* Active star color */
+}
+
+/* Button Styling */
+.modalTxt {
+    background: linear-gradient(135deg, #FF5E5E, #FFAD4D);
+    color: white !important;
+    padding: 0.8rem 2rem;
+    border-radius: 8px;
+    font-weight: 700;
+    font-size: 1.1rem;
+    margin-top: 1rem;
+    box-shadow: 0 4px 15px rgba(255, 94, 94, 0.3);
+    border: none;
+    transition: transform 0.2s, box-shadow 0.2s;
+    width: fit-content;
+}
+
+.modalTxt:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(255, 94, 94, 0.4);
+}

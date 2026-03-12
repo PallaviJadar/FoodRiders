@@ -1,0 +1,24 @@
+[
+  {
+    "_id": "69584582d74d851b52479468",
+    "title": "Order Food",
+    "image": "boy1_delivery.png",
+    "categoryGroupId": "69584582d74d851b5247945a",
+    "displayOrder": 1,
+    "isActive": true,
+    "createdAt": "2026-01-02T22:24:02.473Z",
+    "updatedAt": "2026-01-02T22:24:02.473Z",
+    "__v": 0
+  },
+  {
+    "_id": "69584582d74d851b5247946a",
+    "title": "Grocery Delivery",
+    "image": "boy2_delivery.png",
+    "categoryGroupId": "69584582d74d851b52479464",
+    "displayOrder": 2,
+    "isActive": true,
+    "createdAt": "2026-01-02T22:24:02.480Z",
+    "updatedAt": "2026-01-02T22:24:02.480Z",
+    "__v": 0
+  }
+]

@@ -1,0 +1,128 @@
+.card {
+    width: 100%;
+    max-width: 380px;
+    padding: 1.5rem 2rem;
+    border-radius: 16px;
+    border: 2px solid var(--border-subtle);
+    background: var(--bg-card);
+    cursor: pointer;
+    margin: 0 auto;
+    text-decoration: none;
+    color: var(--color-text-main);
+    box-shadow: var(--shadow-sm);
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+    overflow: hidden;
+    grid-column: 1 / -1;
+}
+
+.card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, #FF5E5E, #FFAD4D, #FFF38C, #6EC6EA);
+    background-size: 200% 100%;
+    animation: gradientSlide 3s ease infinite;
+}
+
+@keyframes gradientSlide {
+
+    0%,
+    100% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+    border-color: rgba(110, 198, 234, 0.4);
+    background: linear-gradient(135deg, rgba(255, 94, 94, 0.1), rgba(255, 173, 77, 0.1));
+}
+
+.innerBox {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+.place {
+    font-size: 1.2rem;
+    font-weight: 700;
+    background: linear-gradient(135deg, #FF5E5E, #FFAD4D);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    transition: all 0.3s ease;
+}
+
+.card:hover .place {
+    letter-spacing: 1px;
+}
+
+.arrow {
+    width: 18px;
+    height: 18px;
+    filter: brightness(0) saturate(100%) invert(45%) sepia(98%) saturate(2449%) hue-rotate(338deg) brightness(101%) contrast(101%);
+    transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.arrow.rotated {
+    transform: rotate(180deg);
+}
+
+.card:hover .arrow {
+    animation: bounce 1s ease infinite;
+}
+
+@keyframes bounce {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-5px);
+    }
+}
+
+.card:hover .arrow.rotated {
+    animation: bounceUp 1s ease infinite;
+}
+
+@keyframes bounceUp {
+
+    0%,
+    100% {
+        transform: rotate(180deg) translateY(0);
+    }
+
+    50% {
+        transform: rotate(180deg) translateY(5px);
+    }
+}
+
+@media (max-width: 768px) {
+    .card {
+        max-width: 100%;
+        padding: 1.2rem 1.5rem;
+    }
+
+    .place {
+        font-size: 1.1rem;
+    }
+
+    .arrow {
+        width: 16px;
+        height: 16px;
+    }
+}

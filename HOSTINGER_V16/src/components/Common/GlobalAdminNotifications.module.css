@@ -1,0 +1,141 @@
+.notificationOverlay {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 10000;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    max-width: 360px;
+    width: calc(100% - 40px);
+}
+
+.notificationCard {
+    background: #ffffff;
+    border-left: 5px solid #ed1c24;
+    border-radius: 12px;
+    padding: 16px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+    display: flex;
+    gap: 15px;
+    animation: slideIn 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.notificationCard:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
+}
+
+.notificationCard:active {
+    transform: scale(0.98);
+}
+
+.iconContainer {
+    font-size: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.content {
+    flex: 1;
+}
+
+.title {
+    font-weight: 800;
+    color: #1a1a1a;
+    margin: 0 0 4px 0;
+    font-size: 1.05rem;
+}
+
+.message {
+    color: #666;
+    font-size: 0.9rem;
+    margin: 0;
+    line-height: 1.4;
+}
+
+.orderMeta {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 8px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: #888;
+}
+
+.amount {
+    color: #27ae60;
+}
+
+.closeBtn {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    background: #f5f5f5;
+    border: none;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    color: #999;
+    font-size: 14px;
+    transition: all 0.2s;
+}
+
+.closeBtn:hover {
+    background: #eee;
+    color: #333;
+}
+
+.progressBar {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 3px;
+    background: #ed1c24;
+    width: 100%;
+    animation: progress 5s linear forwards;
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateX(120%);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes progress {
+    from {
+        width: 100%;
+    }
+
+    to {
+        width: 0%;
+    }
+}
+
+@media (max-width: 480px) {
+    .notificationOverlay {
+        top: 10px;
+        right: 10px;
+        left: 10px;
+        max-width: none;
+    }
+
+    .notificationCard {
+        padding: 12px;
+    }
+}

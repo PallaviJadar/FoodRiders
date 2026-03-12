@@ -1,0 +1,513 @@
+.container {
+    padding: 2rem;
+    max-width: 1400px;
+    margin: 0 auto;
+    background: #f8f9fa;
+    min-height: 100vh;
+}
+
+.header {
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.header h1 {
+    font-size: 2.5rem;
+    color: #2c3e50;
+    margin-bottom: 0.5rem;
+}
+
+.warning {
+    background: #fff3cd;
+    color: #856404;
+    padding: 0.75rem 1.5rem;
+    border-radius: 8px;
+    display: inline-block;
+    font-weight: 600;
+    border: 2px solid #ffc107;
+}
+
+.loading {
+    text-align: center;
+    padding: 4rem;
+    font-size: 1.5rem;
+    color: #666;
+}
+
+/* Grid Layout */
+.grid {
+    display: grid;
+    grid-template-columns: 1fr 400px;
+    gap: 2rem;
+}
+
+@media (max-width: 1024px) {
+    .grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+.leftColumn {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.rightColumn {
+    position: sticky;
+    top: 2rem;
+    height: fit-content;
+}
+
+/* Cards */
+.card {
+    background: white;
+    border-radius: 16px;
+    padding: 2rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    border: 1px solid #e0e0e0;
+}
+
+.card h3 {
+    font-size: 1.4rem;
+    color: #2c3e50;
+    margin-bottom: 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.card p {
+    color: #666;
+    font-size: 0.9rem;
+    margin-top: 0.25rem;
+}
+
+.cardHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 1.5rem;
+}
+
+/* Toggle Switch */
+.toggle {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+    flex-shrink: 0;
+}
+
+.toggle input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    transition: .3s;
+    border-radius: 34px;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    transition: .3s;
+    border-radius: 50%;
+}
+
+input:checked+.slider {
+    background-color: #4CAF50;
+}
+
+input:checked+.slider:before {
+    transform: translateX(26px);
+}
+
+/* Input Groups */
+.inputGroup {
+    margin-bottom: 1.5rem;
+}
+
+.inputGroup label {
+    display: block;
+    font-weight: 600;
+    color: #555;
+    margin-bottom: 0.5rem;
+    font-size: 0.95rem;
+}
+
+.inputGroup small {
+    display: block;
+    color: #888;
+    margin-top: 0.5rem;
+    font-size: 0.85rem;
+}
+
+.input {
+    width: 100%;
+    padding: 12px 16px;
+    border: 2px solid #e0e0e0;
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: all 0.2s;
+}
+
+.input:focus {
+    outline: none;
+    border-color: #ff4757;
+    box-shadow: 0 0 0 3px rgba(255, 71, 87, 0.1);
+}
+
+/* Radio Buttons */
+.radioGroup {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.radio {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 12px 16px;
+    border: 2px solid #e0e0e0;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.radio:hover {
+    border-color: #ff4757;
+    background: #fff5f6;
+}
+
+.radio input[type="radio"] {
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+}
+
+.radio input[type="radio"]:checked+span {
+    font-weight: 600;
+    color: #ff4757;
+}
+
+/* Slabs Table */
+.slabsTable {
+    margin-top: 1rem;
+}
+
+.slabsTable table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 1rem;
+}
+
+.slabsTable th {
+    background: #f8f9fa;
+    padding: 10px;
+    text-align: left;
+    font-weight: 600;
+    color: #555;
+    border-bottom: 2px solid #e0e0e0;
+}
+
+.slabsTable td {
+    padding: 8px;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.slabInput {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #e0e0e0;
+    border-radius: 4px;
+    font-size: 0.95rem;
+}
+
+.slabInput:focus {
+    outline: none;
+    border-color: #ff4757;
+}
+
+.addBtn {
+    padding: 10px 20px;
+    background: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: all 0.2s;
+}
+
+.addBtn:hover {
+    background: #45a049;
+    transform: translateY(-1px);
+}
+
+.deleteBtn {
+    background: none;
+    border: none;
+    font-size: 1.2rem;
+    cursor: pointer;
+    padding: 4px 8px;
+    transition: transform 0.2s;
+}
+
+.deleteBtn:hover {
+    transform: scale(1.2);
+}
+
+/* Toggle Row */
+.toggleRow {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 0;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.toggleRow:last-child {
+    border-bottom: none;
+}
+
+.toggleRow span {
+    font-weight: 500;
+    color: #333;
+}
+
+/* File Input */
+.fileInput {
+    width: 100%;
+    padding: 10px;
+    border: 2px dashed #e0e0e0;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.qrPreview {
+    width: 150px;
+    height: 150px;
+    object-fit: contain;
+    border: 2px solid #e0e0e0;
+    border-radius: 8px;
+    margin-top: 1rem;
+    padding: 10px;
+    background: #f8f9fa;
+}
+
+/* Tip Presets */
+.tipPresets {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0.5rem;
+}
+
+.tipInput {
+    padding: 10px;
+    border: 2px solid #e0e0e0;
+    border-radius: 8px;
+    text-align: center;
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+.tipInput:focus {
+    outline: none;
+    border-color: #ff4757;
+}
+
+/* Checkbox */
+.checkbox {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 0.75rem 0;
+    cursor: pointer;
+}
+
+.checkbox input[type="checkbox"] {
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+}
+
+.checkbox span {
+    font-weight: 500;
+    color: #333;
+}
+
+/* Preview Card */
+.previewCard {
+    background: white;
+    border-radius: 16px;
+    padding: 2rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    border: 2px solid #ff4757;
+}
+
+.previewCard h3 {
+    font-size: 1.4rem;
+    color: #2c3e50;
+    margin-bottom: 0.5rem;
+}
+
+.previewNote {
+    color: #888;
+    font-size: 0.9rem;
+    margin-bottom: 1.5rem;
+}
+
+.billPreview {
+    background: #f8f9fa;
+    border-radius: 12px;
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.billRow {
+    display: flex;
+    justify-content: space-between;
+    padding: 0.75rem 0;
+    border-bottom: 1px solid #e0e0e0;
+    font-size: 1rem;
+}
+
+.billRow:last-child {
+    border-bottom: none;
+}
+
+.billRow.total {
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: #ff4757;
+    padding-top: 1rem;
+    margin-top: 0.5rem;
+    border-top: 2px solid #ff4757;
+}
+
+.warningBox {
+    background: #fff3cd;
+    border: 2px solid #ffc107;
+    border-radius: 8px;
+    padding: 1rem;
+}
+
+.warningBox strong {
+    display: block;
+    color: #856404;
+    margin-bottom: 0.5rem;
+}
+
+.warningBox p {
+    color: #856404;
+    font-size: 0.9rem;
+    margin: 0;
+}
+
+/* Footer */
+.footer {
+    position: sticky;
+    bottom: 0;
+    background: white;
+    padding: 1.5rem 2rem;
+    box-shadow: 0 -4px 12px rgba(0, 0, 0, 0.1);
+    border-radius: 16px 16px 0 0;
+    margin-top: 2rem;
+}
+
+.saveBtn {
+    width: 100%;
+    padding: 1.25rem 2rem;
+    background: linear-gradient(135deg, #ff4757 0%, #ff6b81 100%);
+    color: white;
+    border: none;
+    border-radius: 12px;
+    font-size: 1.2rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.3s;
+    box-shadow: 0 4px 15px rgba(255, 71, 87, 0.3);
+}
+
+.saveBtn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(255, 71, 87, 0.4);
+}
+
+.saveBtn:disabled {
+    background: #ccc;
+    cursor: not-allowed;
+    transform: none;
+    box-shadow: none;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+    .container {
+        padding: 1rem;
+    }
+
+    .header h1 {
+        font-size: 1.8rem;
+    }
+
+    .card {
+        padding: 1.5rem;
+    }
+
+    .radioGroup {
+        flex-direction: column;
+    }
+
+    .tipPresets {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .rightColumn {
+        position: static;
+    }
+}
+
+/* Notification Grid Styles */
+.notificationGrid {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    background: #fdfdfd;
+    padding: 15px;
+    border-radius: 12px;
+    border: 1px solid #eee;
+}
+
+.notifyToggleRow {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 0;
+}
+
+.notifyLabel {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-weight: 700;
+    color: #444;
+    font-size: 0.95rem;
+}

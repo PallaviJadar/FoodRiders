@@ -1,0 +1,43 @@
+{
+  "appId": "com.foodriders.app",
+  "appName": "FoodRiders",
+  "webDir": "dist",
+  "server": {
+    "url": "https://www.foodriders.in",
+    "cleartext": true,
+    "allowNavigation": [
+      "foodriders.in",
+      "www.foodriders.in",
+      "10.0.2.2",
+      "localhost",
+      "*.foodriders.in",
+      "wa.me",
+      "api.whatsapp.com",
+      "*.google.com",
+      "*.gstatic.com",
+      "*.googleapis.com",
+      "*.razorpay.com",
+      "api.razorpay.com"
+    ]
+  },
+  "android": {
+    "allowMixedContent": true,
+    "captureInput": true,
+    "webContentsDebuggingEnabled": true,
+    "buildOptions": {
+      "keystorePath": "release-key.jks"
+    }
+  },
+  "ios": {
+    "contentInset": "always"
+  },
+  "plugins": {
+    "PushNotifications": {
+      "presentationOptions": [
+        "badge",
+        "sound",
+        "alert"
+      ]
+    }
+  }
+}

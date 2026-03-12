@@ -1,0 +1,540 @@
+.outerDiv {
+    min-height: 100vh;
+    background: var(--bg-main);
+}
+
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 100px 20px 40px;
+    display: flex;
+    gap: 30px;
+}
+
+.main {
+    flex: 1;
+}
+
+.sidebar {
+    width: 380px;
+}
+
+.section {
+    background: var(--bg-card);
+    border-radius: 20px;
+    padding: 30px;
+    margin-bottom: 25px;
+    box-shadow: var(--shadow-sm);
+    border: 1px solid var(--border-subtle);
+}
+
+.sectionTitle {
+    font-size: 20px;
+    font-weight: 800;
+    margin-bottom: 20px;
+    color: var(--color-title-text);
+}
+
+.itemsList {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.itemInfo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.itemName {
+    font-weight: 600;
+    color: var(--color-p4-text);
+}
+
+.itemQty {
+    color: var(--color-text-dim);
+    font-size: 14px;
+}
+
+.itemPrice {
+    font-weight: 700;
+    color: var(--color-title-text);
+}
+
+.addressBox {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.detectBtn {
+    background: var(--bg-surface);
+    color: var(--color-primary);
+    border: 1px solid var(--color-primary);
+    padding: 10px;
+    border-radius: 10px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.2s;
+    font-size: 0.9rem;
+}
+
+.detectBtn:hover {
+    background: var(--color-primary);
+    color: white;
+}
+
+.addressInput {
+    width: 100%;
+    padding: 15px;
+    border: 1px solid var(--brd1-color);
+    border-radius: 12px;
+    background: var(--bg-card);
+    color: var(--color-title-text);
+    font-size: 15px;
+    font-family: inherit;
+    resize: none;
+    transition: border-color 0.2s;
+}
+
+.addressInput:focus {
+    outline: none;
+    border-color: var(--color-redish1);
+}
+
+.addressHelp {
+    font-size: 12px;
+    color: var(--color-text-dim);
+}
+
+.paymentOptions {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.paymentCard {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 20px;
+    border: 2px solid var(--brd1-color);
+    border-radius: 16px;
+    cursor: pointer;
+    transition: all 0.2s;
+    color: var(--color-title-text);
+}
+
+.paymentCard:hover {
+    border-color: var(--color-primary);
+    background: var(--bg-subtle);
+}
+
+.paymentCard.selected {
+    border-color: var(--color-redish1);
+    background: var(--bg-redish6);
+}
+
+.paymentIcon {
+    font-size: 32px;
+}
+
+.paymentInfo h3 {
+    font-size: 16px;
+    font-weight: 700;
+    margin-bottom: 4px;
+}
+
+.paymentInfo p {
+    font-size: 13px;
+    color: var(--color-text-muted);
+}
+
+.priceCard {
+    background: var(--bg-card);
+    border-radius: 20px;
+    padding: 30px;
+    box-shadow: var(--shadow-md);
+    border: 1px solid var(--border-subtle);
+    position: sticky;
+    top: 100px;
+}
+
+.priceTitle {
+    font-size: 18px;
+    font-weight: 800;
+    margin-bottom: 20px;
+}
+
+.priceRow {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 12px;
+    color: var(--color-text-muted);
+    font-size: 15px;
+}
+
+.total {
+    margin-top: 20px;
+    padding-top: 20px;
+    border-top: 1px dashed var(--brd1-color);
+    color: var(--color-title-text);
+    font-weight: 800;
+    font-size: 18px;
+}
+
+.error {
+    color: #ff4757;
+    font-size: 14px;
+    margin: 15px 0;
+    font-weight: 600;
+}
+
+.orderBtn {
+    width: 100%;
+    padding: 18px;
+    background: var(--color-primary);
+    color: var(--color-text-on-primary);
+    border: none;
+    border-radius: 14px;
+    font-weight: 700;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 15px;
+    transition: transform 0.2s;
+}
+
+.orderBtn:hover:not(:disabled) {
+    transform: scale(1.01);
+}
+
+.orderBtn:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+.empty {
+    min-height: 100vh;
+    background: var(--bg-white);
+}
+
+.emptyContent {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: calc(100vh - 80px);
+}
+
+.emptyContent h2 {
+    margin-bottom: 20px;
+    color: var(--color-p2-text);
+}
+
+.emptyContent button {
+    padding: 12px 30px;
+    background: var(--color-primary);
+    color: var(--color-text-on-primary);
+    border-radius: 10px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.tipSubtitle {
+    font-size: 14px;
+    color: var(--color-text-dim);
+    margin: -15px 0 20px;
+}
+
+.tipOptions {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+.tipBtn {
+    padding: 10px 20px;
+    border: 1.5px solid var(--brd1-color);
+    border-radius: 12px;
+    background: var(--bg-surface);
+    color: var(--color-title-text);
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.2s;
+    font-size: 14px;
+}
+
+.tipBtn:hover {
+    border-color: var(--color-primary);
+}
+
+.tipBtn.selectedTip {
+    background: var(--color-primary);
+    color: white;
+    border-color: var(--color-primary);
+    box-shadow: 0 4px 12px rgba(255, 94, 94, 0.2);
+}
+
+.customTipInput {
+    margin-top: 15px;
+    overflow: hidden;
+}
+
+.customTipInput input {
+    width: 100%;
+    max-width: 150px;
+    padding: 12px;
+    border: 1.5px solid var(--color-primary);
+    border-radius: 10px;
+    background: var(--bg-main);
+    color: var(--color-title-text);
+    font-weight: 700;
+    outline: none;
+}
+
+.disabledBtn {
+    opacity: 0.5;
+    background: #ccc !important;
+}
+
+.walletRow {
+    color: #2ed573 !important;
+    font-weight: 700;
+    background: rgba(46, 213, 115, 0.05);
+    padding: 8px 12px;
+    border-radius: 8px;
+    margin: 5px 0;
+}
+
+.walletCheck {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+}
+
+.walletCheck input {
+    width: 16px;
+    height: 16px;
+    accent-color: #2ed573;
+}
+
+.walletCheck input {
+    width: 16px;
+    height: 16px;
+    accent-color: #2ed573;
+}
+
+.freeTag {
+    color: #2ed573 !important;
+    font-weight: 800;
+    letter-spacing: 1px;
+}
+
+.offerSuccess {
+    background: rgba(46, 213, 115, 0.1);
+    color: #2ed573;
+    padding: 6px 10px;
+    border-radius: 6px;
+    font-size: 0.8rem;
+    font-weight: 700;
+    text-align: center;
+    margin: 5px 0 10px;
+    border: 1px dashed #2ed573;
+}
+
+.discountRow {
+    color: #ff4757 !important;
+    font-weight: 700;
+}
+
+@media (max-width: 900px) {
+    .container {
+        flex-direction: column;
+        padding-top: 80px;
+    }
+
+    .sidebar {
+        width: 100%;
+    }
+}
+
+.scheduleBox {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.scheduleToggle {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    cursor: pointer;
+    font-weight: 700;
+    color: var(--color-title-text);
+    background: var(--bg-surface);
+    padding: 12px 18px;
+    border-radius: 12px;
+    border: 1.5px solid var(--border-subtle);
+    transition: all 0.2s;
+}
+
+.scheduleToggle:hover {
+    border-color: var(--color-primary);
+}
+
+.scheduleToggle input {
+    width: 20px;
+    height: 20px;
+    accent-color: var(--color-primary);
+}
+
+.scheduleSelect {
+    width: 100%;
+    padding: 14px;
+    border: 2px solid var(--color-primary);
+    border-radius: 14px;
+    background: var(--bg-card);
+    color: var(--color-title-text);
+    font-size: 16px;
+    font-weight: 700;
+    cursor: pointer;
+    outline: none;
+    box-shadow: 0 4px 15px rgba(255, 94, 94, 0.1);
+}
+
+.notesLabel {
+    display: block;
+    font-size: 14px;
+    font-weight: 800;
+    color: var(--color-text-dim);
+    margin-bottom: 8px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.notesInput {
+    width: 100%;
+    padding: 15px;
+    border: 2px dashed var(--border-subtle);
+    border-radius: 12px;
+    background: var(--bg-surface);
+    color: var(--color-title-text);
+    font-size: 15px;
+    font-family: inherit;
+    resize: none;
+    transition: all 0.2s;
+}
+
+.notesInput:focus {
+    outline: none;
+    border-color: var(--color-primary);
+    background: var(--bg-card);
+    border-style: solid;
+}
+
+.charLimit {
+    text-align: right;
+    font-size: 11px;
+    color: var(--color-text-dim);
+    margin-top: 4px;
+    font-weight: 600;
+}
+
+.slotContainer {
+    overflow: hidden;
+}
+
+.suggestions {
+    margin-top: 15px;
+}
+
+.suggestionLabel {
+    font-size: 13px;
+    font-weight: 700;
+    color: var(--color-text-dim);
+    margin-bottom: 10px;
+}
+
+.chipContainer {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.noteChip {
+    background: var(--bg-surface);
+    color: var(--color-title-text);
+    padding: 8px 16px;
+    border-radius: 50px;
+    font-size: 13px;
+    font-weight: 600;
+    border: 1.5px solid var(--border-subtle);
+    cursor: pointer;
+    transition: all 0.2s;
+    white-space: nowrap;
+}
+
+.noteChip:hover {
+    border-color: var(--color-secondary);
+    background: rgba(110, 198, 234, 0.05);
+}
+
+.extraChargesInfo {
+    margin-bottom: 20px;
+}
+
+.extraChargeBox {
+    background: #f1f9ff;
+    border: 1px solid #d1e9ff;
+    border-radius: 12px;
+    padding: 12px 15px;
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    margin-bottom: 10px;
+    animation: slideIn 0.3s ease-out;
+}
+
+.extraChargeIcon {
+    font-size: 20px;
+}
+
+.extraChargeText h4 {
+    font-size: 14px;
+    font-weight: 700;
+    color: #1e3799;
+    margin: 0 0 2px 0;
+}
+
+.extraChargeText p {
+    font-size: 12px;
+    color: #4a69bd;
+    margin: 0;
+    line-height: 1.4;
+}
+
+.extraRow {
+    color: #ff4757 !important;
+    /* Use red for extra charges to distinguish them */
+    font-weight: 600;
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

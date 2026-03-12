@@ -1,0 +1,100 @@
+.menuContainer {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+    background: white;
+    min-height: 100vh;
+}
+
+.header {
+    text-align: center;
+    margin-bottom: 2rem;
+    padding: 2.5rem;
+    background: #f8f9fa;
+    border-radius: 20px;
+}
+
+.header h1 {
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: #2d3436;
+    margin: 0 0 0.5rem 0;
+    font-family: 'Outfit', sans-serif;
+}
+
+.disclaimer {
+    font-size: 0.9rem;
+    color: #FF5E5E;
+    font-weight: 600;
+}
+
+.searchContainer {
+    position: relative;
+    max-width: 600px;
+    margin: 0 auto 3rem auto;
+    display: flex;
+    align-items: center;
+}
+
+.searchInput {
+    width: 100%;
+    padding: 1rem 1.5rem;
+    padding-right: 3rem;
+    border-radius: 50px;
+    border: 2px solid #eee;
+    font-size: 1.1rem;
+    font-family: 'Outfit', sans-serif;
+    color: #333;
+    outline: none;
+    transition: all 0.3s ease;
+    background: white;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.03);
+}
+
+.searchInput:focus {
+    border-color: #FF5E5E;
+    box-shadow: 0 10px 25px rgba(255, 94, 94, 0.15);
+}
+
+.searchIcon {
+    position: absolute;
+    right: 20px;
+    font-size: 1.2rem;
+    color: #aaa;
+    pointer-events: none;
+}
+
+.menuSection {
+    margin-bottom: 4rem;
+}
+
+.menuSection h2 {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #2d3436;
+    margin-bottom: 1.5rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 3px solid #6EC6EA;
+    display: inline-block;
+}
+
+.menuGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 2rem;
+}
+
+@media (max-width: 768px) {
+    .menuContainer {
+        padding: 1rem;
+    }
+
+    .header h1 {
+        font-size: 1.8rem;
+    }
+
+    .menuGrid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+    }
+}

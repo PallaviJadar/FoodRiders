@@ -1,0 +1,50 @@
+.outerDiv {
+    width: 160px;
+    height: 190px;
+    /* Increased height for better spacing */
+    margin: 0 auto;
+    cursor: pointer;
+}
+
+.innerDiv {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.imgDiv {
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+    overflow: visible;
+    /* Allow shadow/transform to show */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: white;
+    /* Optional: background for transparent PNGs */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.06);
+    /* Subtle base shadow */
+    margin-bottom: 1rem;
+}
+
+.img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+    transition: transform 0.3s ease;
+}
+
+.title {
+    width: 100%;
+    text-align: center;
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #2d3436;
+    font-family: 'Outfit', sans-serif;
+    letter-spacing: 0.5px;
+}

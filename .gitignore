@@ -1,0 +1,43 @@
+# Dependency directories
+node_modules/
+jspm_packages/
+
+# Build directories
+dist/
+public/
+build/
+.builds/
+
+# Persistent Data (CRITICAL: DO NOT DELETE DURING REDEPLOY)
+# NOTE TO ADMIN: Back up this folder periodically!
+uploads/
+server/uploads/
+
+# Environment files
+.env
+.env.local
+.env.production
+.env.development
+
+# OS / IDE files
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+*.log
+
+# Temp folders
+tmp/
+hostinger_temp/
+temp_deploy_final/
+Hostinger_Deploy/
+DEPLOY_ME/
+FINAL_OUT/
+SUBMIT_FINAL/
+SUBMIT_CLEAN/
+MOBILE_FIX_SUBMIT/
+PREMIUM_OUT/
+temp_zip_recovery/
+production_temp/
+deploy_mobile_fix/
+*.zip

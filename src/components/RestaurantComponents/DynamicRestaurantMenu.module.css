@@ -1,0 +1,117 @@
+.menuWrapper {
+    padding-bottom: 5rem;
+}
+
+.itemsGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 1.5rem;
+    margin: 1.5rem 0 3rem;
+}
+
+.emptyMenu {
+    padding: 4rem 2rem;
+    text-align: center;
+    background: var(--bg-card);
+    border-radius: 20px;
+    box-shadow: var(--shadow-md);
+    margin: 2rem auto;
+    max-width: 600px;
+    border: 1px solid var(--border-subtle);
+}
+
+.categoryTabs {
+    display: flex;
+    gap: 10px;
+    padding: 1.2rem 0;
+    margin-bottom: 2rem;
+    overflow-x: auto;
+    white-space: nowrap;
+    position: sticky;
+    top: 0;
+    background: var(--bg-main);
+    z-index: 100;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+    border-bottom: 1.5px solid var(--border-subtle);
+}
+
+.categoryTabs::-webkit-scrollbar {
+    display: none;
+}
+
+.tabChip {
+    padding: 10px 22px;
+    border-radius: 50px;
+    border: 1.5px solid var(--border-subtle);
+    background: var(--bg-surface);
+    color: var(--color-text-muted);
+    font-size: 0.9rem;
+    font-weight: 800;
+    cursor: pointer;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    flex-shrink: 0;
+}
+
+.tabChip:hover {
+    border-color: var(--color-primary);
+    color: var(--color-primary);
+    background: var(--bg-subtle);
+}
+
+.activeTab {
+    background: linear-gradient(135deg, var(--color-primary), #FF2E2E);
+    color: white !important;
+    border-color: var(--color-primary);
+    box-shadow: 0 4px 15px rgba(255, 94, 94, 0.3);
+}
+
+.categorySection {
+    margin-bottom: 3rem;
+}
+
+.emptyIcon {
+    font-size: 4rem;
+    margin-bottom: 1rem;
+}
+
+.emptyTitle {
+    color: var(--color-text-main);
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    font-weight: 800;
+}
+
+.emptyText {
+    color: var(--color-text-muted);
+    font-size: 1.1rem;
+}
+
+.closedCategoryMsg {
+    margin: 1.5rem 0 3rem;
+    padding: 2rem;
+    background: var(--bg-surface);
+    border: 1px dashed var(--border-subtle);
+    border-radius: 16px;
+    text-align: center;
+    color: var(--color-text-muted);
+    font-weight: 500;
+}
+
+@media (max-width: 768px) {
+    .itemsGrid {
+        grid-template-columns: 1fr;
+        padding: 0 1rem;
+    }
+
+    .emptyTitle {
+        font-size: 1.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .itemsGrid {
+        padding: 0 10px;
+        gap: 1rem;
+    }
+}

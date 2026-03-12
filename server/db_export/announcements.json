@@ -1,0 +1,16 @@
+[
+  {
+    "_id": "695843d461c9f83478b8a747",
+    "type": "Promotion / Offer",
+    "title": "50% OFF on First Order!",
+    "description": "Use code WELCOME50 to get amazing discounts on your first meal with FoodRiders.",
+    "image": "pizza.png",
+    "startDate": "2026-01-02T22:16:52.680Z",
+    "endDate": "2026-01-09T22:16:52.680Z",
+    "isActive": true,
+    "interactions": [],
+    "createdAt": "2026-01-02T22:16:52.683Z",
+    "updatedAt": "2026-01-02T22:16:52.683Z",
+    "__v": 0
+  }
+]

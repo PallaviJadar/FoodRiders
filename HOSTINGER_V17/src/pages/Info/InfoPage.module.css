@@ -1,0 +1,136 @@
+.outerDiv {
+    min-height: 100vh;
+    background: var(--bg-main);
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 100px 20px 60px;
+    display: flex;
+    gap: 40px;
+}
+
+.sidebar {
+    width: 250px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    flex-shrink: 0;
+}
+
+.sideLink {
+    padding: 15px 20px;
+    border-radius: 12px;
+    text-decoration: none;
+    color: var(--color-text-muted);
+    font-weight: 600;
+    transition: all 0.2s;
+    background: var(--bg-surface);
+    border: 1px solid var(--border-subtle);
+}
+
+.sideLink:hover {
+    background: var(--bg-subtle);
+    color: var(--color-primary);
+}
+
+.sideLink.active {
+    background: var(--color-primary);
+    color: white;
+    border-color: var(--color-primary);
+}
+
+.content {
+    flex: 1;
+    background: var(--bg-card);
+    padding: 40px;
+    border-radius: 24px;
+    border: 1px solid var(--border-subtle);
+    box-shadow: var(--shadow-sm);
+}
+
+.title {
+    font-size: 2.5rem;
+    font-weight: 800;
+    margin-bottom: 30px;
+    color: var(--color-text-main);
+}
+
+.text {
+    line-height: 1.8;
+    color: var(--color-text-body);
+}
+
+.text h4 {
+    margin: 30px 0 10px;
+    font-size: 1.2rem;
+    color: var(--color-text-main);
+}
+
+.text p {
+    margin-bottom: 20px;
+}
+
+.helpOptions {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    margin-top: 30px;
+}
+
+.helpCard {
+    padding: 25px;
+    background: var(--bg-subtle);
+    border-radius: 20px;
+    text-align: center;
+}
+
+.helpCard h4 {
+    margin-top: 0;
+}
+
+.btn {
+    display: inline-block;
+    padding: 10px 25px;
+    background: var(--color-primary);
+    color: white;
+    border-radius: 10px;
+    text-decoration: none;
+    font-weight: 700;
+    border: none;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        padding-top: 80px;
+    }
+
+    .sidebar {
+        width: 100%;
+        flex-direction: row;
+        overflow-x: auto;
+        padding-bottom: 10px;
+    }
+
+    .sideLink {
+        white-space: nowrap;
+        padding: 10px 15px;
+        font-size: 0.9rem;
+    }
+
+    .content {
+        padding: 25px;
+    }
+
+    .title {
+        font-size: 1.8rem;
+    }
+
+    .helpOptions {
+        grid-template-columns: 1fr;
+    }
+}
