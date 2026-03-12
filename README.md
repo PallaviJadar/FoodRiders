@@ -1,5 +1,5 @@
 <div align="center">
-  <img src="https://raw.githubusercontent.com/PallaviJadar/FoodRiders/main/public/logo192.png" alt="FoodRiders Logo" width="150" height="auto" />
+  <img src="https://raw.githubusercontent.com/PallaviJadar/FoodRiders/main/public/Logo-Img.png" alt="FoodRiders Logo" width="150" height="auto" />
   <h1>🍔 FoodRiders</h1>
   <p><strong>A Next-Generation, Real-Time Food Delivery Platform</strong></p>
 
