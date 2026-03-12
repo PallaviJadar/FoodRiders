@@ -1,5 +1,5 @@
 <div align="center">
-  <img src="https://raw.githubusercontent.com/PallaviJadar/FoodRiders/main/public/Logo-Img.png" alt="FoodRiders Logo" width="150" height="auto" />
+ 
   <h1>🍔 FoodRiders</h1>
   <p><strong>A Next-Generation, Real-Time Food Delivery Platform</strong></p>
 
@@ -55,13 +55,7 @@ foodriders_deploy/
 └── public/               # Static assets & manifest files
 ```
 
-## 📸 Sneak Peek
 
-*(Add your beautiful application screenshots here!)*
-
-> **Tip:** You can upload screenshots to the `public` folder and reference them here to show off the UI.
-
----
 
 <div align="center">
   <p>Built with ❤️ by <b>Pallavi Jadar</b> (DevXign)</p>
