@@ -41,3 +41,8 @@ temp_zip_recovery/
 production_temp/
 deploy_mobile_fix/
 *.zip
+HOSTINGER_V14/
+HOSTINGER_V15/
+HOSTINGER_V16/
+HOSTINGER_V17/
+V13_TEMP/
